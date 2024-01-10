@@ -138,8 +138,8 @@
         .checkout-button {
             margin-top: 10px;
             padding: 8px;
-            background-color: #333;
-            color: #150707;
+            background-color: #16f406;
+            color: #050a05;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -168,7 +168,7 @@
     <div class="cart" id="cart">
         <h2>Giỏ hàng</h2>
         <div class="cart-content" id="cart-content"></div>
-        <button class="checkout-button" onclick="checkout()">Thanh toán</button>
+        <button class="checkout-button" onclick="checkout()"> Xác nhận đặt hàng </button>
     </div>
 
     <script>
@@ -327,7 +327,7 @@
         }
 
         function checkout() {
-            const note = prompt('Ghi chú đặt hàng:');
+            const note = prompt('Ghi chú đặt hàng, ở đây hãy ghi địa chỉ và số điện thoại và người mua có thể thêm yêu cầu của mình vào:');
             const orderDetails = { cart, note };
 
             // Gửi thông tin đơn hàng đến người bán (có thể thực hiện thông qua Ajax hoặc các phương thức khác)
