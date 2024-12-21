@@ -104,46 +104,7 @@
             width: 100%;
         }
 
-        .cart {
-            position: fixed;
-            top: 0;
-            right: 0;
-            background-color: #f0f0f0;
-            padding: 10px;
-            border-left: 1px solid #ddd;
-            display: none;
-        }
 
-        .cart h2 {
-            margin-bottom: 10px;
-        }
-
-        .cart-content {
-            max-height: 400px;
-            overflow-y: auto;
-        }
-
-        .cart-item {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-
-        .cart-item img {
-            max-width: 50px;
-            max-height: 50px;
-            margin-right: 10px;
-        }
-
-        .checkout-button {
-            margin-top: 10px;
-            padding: 8px;
-            background-color: #16f406;
-            color: #050a05;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
     </style>
     <title>Nhóm 10 bán sịp</title>
 </head>
@@ -165,11 +126,6 @@
         <!-- Content will be dynamically loaded here -->
     </main>
 
-    <div class="cart" id="cart">
-        <h2>Giỏ hàng</h2>
-        <div class="cart-content" id="cart-content"></div>
-        <button class="checkout-button" onclick="checkout()"> Xác nhận đặt hàng </button>
-    </div>
 
     <script>
         let cart = [];
@@ -271,10 +227,10 @@
             function showContact() {
             const content = document.getElementById('content');
             content.innerHTML = '<h2>Liên hệ người bán</h2>' +
-                                '<p>Số điện thoại: <a href="tel:0918317061" onclick="redirectTo(\'tel:0918317061\')">0918317061</a></p>' +
-                                '<p>Email: <a href="mailto:khoalegends3@gmail.com" onclick="redirectTo(\'mailto:khoalegends3@gmail.com\')">khoalegends3@gmail.com</a></p>' +
-                                '<p>Zalo: <a href="https://zalo.me/0918317061" target="_blank" onclick="redirectTo(\'https://zalo.me/0918317061\')">0918317061</a></p>' +
-                                '<p>Nơi bán sản phẩm trực tiếp: TpHồ Chí Minh- 490 Điện Biên Phủ</p>';
+                                '<p>Số điện thoại: <a href="tel:123456789" onclick="redirectTo(\'tel:123456789\')">123456789</a></p>' +
+                                '<p>Email: <a href="mailto:alee@gmail.com" onclick="redirectTo(\'mailto:alee@gmail.com\')">alee@gmail.com</a></p>' +
+                                '<p>Zalo: <a href="https://zalo.me/123456789" target="_blank" onclick="redirectTo(\'https://zalo.me/123456789\')">123456789</a></p>' +
+                                '<p>Nơi bán sản phẩm trực tiếp: tale bu ta di on</p>';
         }
 
         function redirectTo(url) {
@@ -326,19 +282,7 @@
             updateCartUI();
         }
 
-        function checkout() {
-            const note = prompt('Ghi chú đặt hàng, ở đây hãy ghi địa chỉ và số điện thoại và người mua có thể thêm yêu cầu của mình vào:');
-            const orderDetails = { cart, note };
-
-            // Gửi thông tin đơn hàng đến người bán (có thể thực hiện thông qua Ajax hoặc các phương thức khác)
-            console.log('Đơn hàng:', orderDetails);
-
-            // Sau khi xác nhận đơn hàng, bạn có thể làm một số thao tác khác như đặt hàng, cập nhật cơ sở dữ liệu, v.v.
-
-            // Sau khi hoàn thành, xóa giỏ hàng và cập nhật UI
-            cart = [];
-            updateCartUI();
-        }
+ 
     </script>
 </body>
 </html>
